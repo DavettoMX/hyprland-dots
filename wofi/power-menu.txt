@@ -1,0 +1,4 @@
+ Cerrar sesión	hyprctl dispatch exit
+ Reiniciar	systemctl reboot
+⏻ Apagar	systemctl poweroff
+ Suspender	systemctl suspend

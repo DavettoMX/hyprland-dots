@@ -1,0 +1,104 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "margin-top": 10,
+  "margin-left": 2,
+  "margin-right": 2,
+  "height": 10,
+  "modules-left": ["custom/separator", "clock", "custom/media"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["cpu", "custom/separator", "memory", "custom/separator", "pulseaudio", "custom/separator", "network", "custom/separator", "bluetooth", "tray", "custom/power"],
+
+  "custom/separator": {
+    "format": " "
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "wlogout"
+  },
+
+  "clock": {
+    "format": " {:%H:%M}",
+    "format-alt": "  {:%a %d %b}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "interval": 1
+  },
+
+  "custom/media": {
+    "format": "󰽴  {}",
+    "exec": "playerctl metadata --format '{{ title }} - {{ artist }}' 2>/dev/null || echo ''",
+    "interval": 1,
+    "max-length": 40,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "●",
+      "default": "○",
+      "empty": "○"
+    },
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5]
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1"
+  },
+
+  "cpu": {
+    "format": "  {usage}%",
+    "interval": 5,
+    "on-click": "kitty btop"
+  },
+
+  "memory": {
+    "format": "  {percentage}%",
+    "interval": 5,
+    "tooltip-format": "{used:.1f} GiB / {total:.1f} GiB",
+    "on-click": "kitty btop"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "󰝟  muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "scroll-step": 1,
+    "on-click": "~/.config/rofi/scripts/volume.sh",
+    "on-click-right": "pamixer -t",
+    "on-click-middle": "pavucontrol"
+  },
+
+  "network": {
+    "format-wifi": "󰤨  {signalStrength}%",
+    "format-ethernet": "󰈀  connected",
+    "format-disconnected": "󰤭  offline",
+    "tooltip-format-wifi": "{essid}\n↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+    "tooltip-format-ethernet": "{ifname}\n↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+    "on-click": "~/.config/rofi/wifi/wifi.sh",
+    "on-click-right": "kitty -e nmtui"
+  },
+
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱  {num_connections}",
+    "tooltip-format": "{controller_alias}\n{status}",
+    "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_battery_percentage}%",
+    "on-click": "~/.config/rofi/scripts/bluetooth.sh",
+    "on-click-right": "blueman-manager"
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 8
+  }
+}

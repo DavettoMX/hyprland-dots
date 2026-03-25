@@ -1,0 +1,13 @@
+show=drun
+width=400
+height=300
+always_parse_args=true
+show_all=false
+print_command=true
+layer=overlay
+insensitive=true
+prompt=
+image_size=24
+columns=1
+allow_images=true
+icon_theme=Adwaita

@@ -1,0 +1,25 @@
+# Ignore everything
+*
+*.bak
+*.save
+*.save.*
+.claude/
+
+# Track only Hyprland stack
+!.gitignore
+!hypr/
+!hypr/**
+!waybar/
+!waybar/**
+!rofi/
+!rofi/**
+!kitty/
+!kitty/**
+!dunst/
+!dunst/**
+!swaync/
+!swaync/**
+!wlogout/
+!wlogout/**
+!wofi/
+!wofi/**

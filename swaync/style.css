@@ -1,0 +1,188 @@
+@define-color bg #1e1e2e;
+@define-color bg-alt #313244;
+@define-color fg #cdd6f4;
+@define-color fg-dim #a6adc8;
+@define-color blue #89b4fa;
+@define-color green #a6e3a1;
+@define-color red #f38ba8;
+@define-color mauve #cba6f7;
+@define-color surface #45475a;
+
+* {
+  font-family: "Iosevka Nerd Font", sans-serif;
+  font-size: 13px;
+}
+
+.notification-row {
+  outline: none;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  background: transparent;
+}
+
+.notification {
+  background: @bg;
+  border: 1px solid @surface;
+  border-radius: 12px;
+  margin: 8px;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.notification-content {
+  padding: 12px;
+}
+
+.notification-default-action {
+  border-radius: 12px;
+}
+
+.notification-default-action:hover {
+  background: @bg-alt;
+}
+
+.close-button {
+  background: @surface;
+  color: @fg;
+  border-radius: 50%;
+  margin: 8px;
+  padding: 4px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  background: @red;
+  color: @bg;
+}
+
+.summary {
+  color: @fg;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.body {
+  color: @fg-dim;
+  font-size: 12px;
+}
+
+.time {
+  color: @fg-dim;
+  font-size: 11px;
+}
+
+.image {
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+/* Control Center */
+.control-center {
+  background: @bg;
+  border: 1px solid @surface;
+  border-radius: 12px;
+  margin: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+/* DND */
+.widget-dnd {
+  background: @bg-alt;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.widget-dnd > switch {
+  background: @surface;
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.widget-dnd > switch:checked {
+  background: @mauve;
+}
+
+.widget-dnd > switch slider {
+  background: @fg;
+  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+/* MPRIS Player */
+.widget-mpris {
+  background: @bg-alt;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.widget-mpris-player {
+  background: linear-gradient(135deg, @bg-alt, @surface);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.widget-mpris-title {
+  color: @fg;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.widget-mpris-subtitle {
+  color: @fg-dim;
+  font-size: 12px;
+}
+
+.widget-mpris-album-art {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.widget-mpris button {
+  background: @surface;
+  color: @fg;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 4px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.widget-mpris button:hover {
+  background: @mauve;
+  color: @bg;
+}
+
+/* Title widget */
+.widget-title {
+  color: @fg;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.widget-title > button {
+  background: @surface;
+  color: @fg;
+  border-radius: 8px;
+  padding: 4px 12px;
+}
+
+.widget-title > button:hover {
+  background: @red;
+  color: @bg;
+}

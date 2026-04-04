@@ -28,6 +28,20 @@
   "hide-on-clear": true,
   "hide-on-action": true,
   "script-fail-notify": true,
+  "scripts": {
+    "navi-hey-listen-low": {
+      "exec": "pw-play /home/davetto/.config/swaync/sounds/hey-listen.mp3",
+      "urgency": "Low"
+    },
+    "navi-hey-listen-normal": {
+      "exec": "pw-play /home/davetto/.config/swaync/sounds/hey-listen.mp3",
+      "urgency": "Normal"
+    },
+    "navi-hey-listen-critical": {
+      "exec": "pw-play /home/davetto/.config/swaync/sounds/hey-listen.mp3",
+      "urgency": "Critical"
+    }
+  },
   "widgets": [
     "dnd",
     "mpris",

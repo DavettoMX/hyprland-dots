@@ -2,11 +2,10 @@
   "layer": "top",
   "position": "top",
   "margin-top": 10,
-  "margin-left": 2,
-  "margin-right": 2,
+  "margin-left": 10,
+  "margin-right": 10,
   "height": 10,
-  "start_hidden": true,
-  "modules-left": ["custom/separator", "clock", "custom/media"],
+  "modules-left": ["clock", "custom/separator", "custom/media"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["cpu", "custom/separator", "memory", "custom/separator", "pulseaudio", "custom/separator", "network", "custom/separator", "bluetooth", "tray", "custom/power"],
 
@@ -21,7 +20,7 @@
   },
 
   "clock": {
-    "format": " {:%H:%M}",
+    "format": "  {:%H:%M}",
     "format-alt": "  {:%a %d %b}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "interval": 1
@@ -71,7 +70,7 @@
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"]
     },
-    "scroll-step": 1,
+    "scroll-step": 5,
     "on-click": "~/.config/rofi/scripts/volume.sh",
     "on-click-right": "pamixer -t",
     "on-click-middle": "pavucontrol"

@@ -30,15 +30,15 @@
   "script-fail-notify": true,
   "scripts": {
     "navi-hey-listen-low": {
-      "exec": "pw-play /home/davetto/.config/swaync/sounds/hey-listen.mp3",
+      "exec": "pw-play /home/davetto/.config/swaync/sounds/hey-listen-48k.wav",
       "urgency": "Low"
     },
     "navi-hey-listen-normal": {
-      "exec": "pw-play /home/davetto/.config/swaync/sounds/hey-listen.mp3",
+      "exec": "pw-play /home/davetto/.config/swaync/sounds/hey-listen-48k.wav",
       "urgency": "Normal"
     },
     "navi-hey-listen-critical": {
-      "exec": "pw-play /home/davetto/.config/swaync/sounds/hey-listen.mp3",
+      "exec": "pw-play /home/davetto/.config/swaync/sounds/hey-listen-48k.wav",
       "urgency": "Critical"
     }
   },

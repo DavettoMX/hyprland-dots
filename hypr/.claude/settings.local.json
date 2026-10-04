@@ -15,7 +15,8 @@
       "Bash(nvidia-settings -q Overscan)",
       "Bash(nvidia-settings -q ViewPortIn)",
       "Bash(nvidia-settings -q ViewPortOut)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(git:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

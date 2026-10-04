@@ -27,6 +27,7 @@ window#waybar {
 
 #clock,
 #custom-media,
+#custom-gaming,
 #cpu,
 #memory,
 #pulseaudio,
@@ -135,6 +136,19 @@ window#waybar {
 }
 
 #bluetooth.connected {
+  color: @green;
+}
+
+#custom-gaming.gaming-on {
+  color: @green;
+  background-color: rgba(166, 227, 161, 0.15);
+}
+
+#custom-gaming.gaming-off {
+  color: @text-dim;
+}
+
+#custom-gaming:hover {
   color: @green;
 }
 

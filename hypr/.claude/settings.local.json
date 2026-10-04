@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(systemctl --user status xdg-desktop-portal)",
+      "Bash(systemctl --user status xdg-desktop-portal-hyprland)",
+      "Bash(rpm -q xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-desktop-portal kitty)",
+      "Bash(kitty --version)",
+      "Read(//home/davetto/.config/kitty/**)",
+      "Bash(journalctl -b --no-pager --grep -i \"hyprland|kitty|gpu|nvidia|amd|drm|crash|segfault|oom\")",
+      "Bash(lspci)",
+      "Bash(lsmod)",
+      "Bash(glxinfo)",
+      "Bash(journalctl -b --no-pager)",
+      "Bash(ffprobe -i /home/davetto/.config/swaync/sounds/hey-listen.mp3 -show_format -show_streams)",
+      "Bash(nvidia-settings -q Overscan)",
+      "Bash(nvidia-settings -q ViewPortIn)",
+      "Bash(nvidia-settings -q ViewPortOut)",
+      "WebSearch"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "obsidian"
+  ]
+}
